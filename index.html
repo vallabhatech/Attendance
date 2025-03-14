@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+<script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDVMluiJ9aGqV3RMxk8K-Q5ZfJU5ZP2TLA",
+    authDomain: "attendance-bbc3b.firebaseapp.com",
+    projectId: "attendance-bbc3b",
+    storageBucket: "attendance-bbc3b.firebasestorage.app",
+    messagingSenderId: "511339353754",
+    appId: "1:511339353754:web:9d9175eebd35534be3f123",
+    measurementId: "G-368P8LCTT0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+  const firebaseConfig = {
+    apiKey: "AIzaSy*******",
+    authDomain: "attendanceapp.firebaseapp.com",
+    projectId: "attendanceapp",
+    storageBucket: "attendanceapp.appspot.com",
+    messagingSenderId: "1234567890",
+    appId: "1:1234567890:web:abcdef123456"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<body>
+
+  <header>
+    <h1>Student Info Form</h1>
+  </header>
+
+  <div class="container">
+    <form id="studentForm" action="attendance.html" method="GET">
+      <label for="studentName">Student Name</label>
+      <input type="text" id="studentName" name="studentName" required />
+
+      <label for="rollNo">Roll Number</label>
+      <input type="text" id="rollNo" name="rollNo" required />
+
+      <label for="class">Class</label>
+      <input type="text" id="class" name="class" required />
+
+      <label for="year">Academic Year</label>
+      <input type="text" id="year" name="year" required />
+
+      <label for="semester">Semester</label>
+      <select id="semester" name="semester" required>
+        <option value="II-II">II-II</option>
+        <option value="III-I">III-I</option>
+        <option value="III-II">III-II</option>
+        <!-- Add more as needed -->
+      </select>
+
+      <button type="submit">Next</button>
+    </form>
+  </div>
+
+  <footer>&copy; 2025 Attendance Tool by Vallabha</footer>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attendance Input</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Update Attendance</h1>
+  </header>
+
+  <div class="container">
+
+    <div id="studentDetails"></div>
+
+    <form id="attendanceForm">
+      <h2>Subjects - Semester Attendance</h2>
+
+      <div class="subject-field">
+        <label>CO (Total 23)</label>
+        <input type="number" id="co" name="co" placeholder="Attended classes" min="0" max="23" required />
+      </div>
+
+      <div class="subject-field">
+        <label>ADSJ (Total 28)</label>
+        <input type="number" id="adsj" name="adsj" placeholder="Attended classes" min="0" max="28" required />
+      </div>
+
+      <div class="subject-field">
+        <label>DBMS (Total 18)</label>
+        <input type="number" id="dbms" name="dbms" placeholder="Attended classes" min="0" max="18" required />
+      </div>
+
+      <div class="subject-field">
+        <label>WT LAB (Total 17)</label>
+        <input type="number" id="wtlab" name="wtlab" placeholder="Attended classes" min="0" max="17" required />
+      </div>
+
+      <div class="subject-field">
+        <label>Others (Total 5)</label>
+        <input type="number" id="others" name="others" placeholder="Attended classes" min="0" max="5" required />
+      </div>
+
+      <button type="button" onclick="calculateAttendance()">Calculate Attendance</button>
+	<button onclick="saveAttendance()">Save Attendance</button>
+
+    </form>
+
+    <div id="result" class="result-box"></div>
+
+  </div>
+
+  <footer>&copy; 2025 Attendance Tool by Vallabha</footer>
+
+  <script src="attendance.js"></script>
+</body>
+</html>
